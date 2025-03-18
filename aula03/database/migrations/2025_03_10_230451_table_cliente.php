@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cadastro', function (Blueprint $cadastro) {
+        Schema::create('cliente', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->string('primeiroNome');
             $table->string('sobrenome');
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('cliente');
     }
 };

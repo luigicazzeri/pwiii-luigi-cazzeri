@@ -6,10 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
-
-Route::get('/cadastro', 'App\Http\Controllers\CadastroController@index'); 
-
-Route::post('/cadastro', 'App\Http\Controllers\CadastroController@store'); 
+//Rotas para Cliente
+Route::post('/cliente','App\Http\Controllers\ClienteController@store'); //cadastro
+Route::get('/cliente','App\Http\Controllers\ClienteController@index'); //visualização
